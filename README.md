@@ -52,6 +52,5 @@ Alternatively, type the following in the MATLAB command window to view a list of
 matlab.addons.installedAddons
 ```
 
-If you do not see the *Statistics and Machine Learning Toolbox*, the *Bioinformatics Toolbox*, *Deep Learning Toolbox*, *Parallel Computing Toolbox* and/or the *Optimization Toolbox*, install these toolboxes by following this [video tutorial](https://www.mathworks.com/videos/add-on-explorer-106745.html). 
-
+If you do not see the *Statistics and Machine Learning Toolbox*, the *Bioinformatics Toolbox*, *Deep Learning Toolbox*, *Parallel Computing Toolbox*, and/or the *Optimization Toolbox*, install these toolboxes by following this <a href="https://www.mathworks.com/videos/add-on-explorer-106745.html" target="_blank">video tutorial</a>.
 

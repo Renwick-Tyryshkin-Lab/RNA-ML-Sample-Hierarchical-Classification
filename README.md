@@ -1,6 +1,11 @@
 # RNA-ML-Sample-Hierarchical-Classification
+Protocol for RNA-based sample discrimination and hierarchical classification.  
 
-## Introduction
+## Table of Contents
+* [Introduction](#intro)
+* [Troubleshooting](#troubleshooting)
+
+## Introduction<a name="intro"></a>
 
 RNA-based sample discrimination and classification can be used to provide biological insights and/or distinguish between clinical groups. However, finding informative differences between sample groups can be challenging due to the multidimensional and noisy nature of sequencing data. Here, we apply a machine learning approach for hierarchical discrimination and classification of samples with high dimensional miRNA expression data. Our protocol comprises data preprocessing, unsupervised learning, feature selection, and machine learning-based hierarchical classification, alongside open-source MATLAB code.
 
@@ -34,13 +39,14 @@ Estimated time: 1 hour
 **CRITICAL:** During installation, ensure the following toolboxes are selected for download: *Bioinformatics Toolbox*, *Statistics and Machine Learning Toolbox*, *Deep Learning Toolbox*, *Parallel Computing Toolbox*, and the *Optimization Toolbox*. To check if these toolboxes are installed in MATLAB, follow Troubleshooting 1. 
 
 ## Troubleshooting
+
 Below are common issues which may arise during the installation steps of this protocol. The below and additional troubleshooting instructions are available in the full text.
 
 **Problem 1:**
 Check that the required MATLAB toolboxes are installed: *Bioinformatics Toolbox*, *Statistics and Machine Learning Toolbox*, *Deep Learning Toolbox*, *Parallel Computing Toolbox* and/or the *Optimization Toolbox* are installed.
 
 **Potential Solution:**
-To view installed toolboxes, navigate to the *Home* tab in MATLAB. Click the arrow under the Add-ons button, then click Manage Add-ons (Figure 29A). In the pop-up window, installed add-ons are listed under the Installed tab (Figure 29B). 
+To view installed toolboxes, navigate to the *Home* tab in MATLAB. Click the arrow under the Add-ons button, then click *Manage Add-ons* (Figure XA). In the pop-up window, installed add-ons are listed under the Installed tab (Figure XB). 
 
 Alternatively, type the following in the MATLAB command window to view a list of installed toolboxes: 
 

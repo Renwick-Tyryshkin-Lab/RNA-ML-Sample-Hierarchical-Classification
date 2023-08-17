@@ -72,7 +72,7 @@ Estimated time: 1 hour
 **Note:** This protocol was developed on Mac OS 10.14.6 with 8 GB of RAM, 2 cores and Windows 11 with 32 GB of RAM, 8 cores. In addition, the protocol was tested on both Mac and Windows operating systems with a range of specifications. Some of the time estimates may vary based on the hardware specifications.
 
 ## How to use this github page<a name="git-instructions"></a>
-* Download the `Supplementary Materials` folder.
+* Download the `Supplementary Materials` directory.
     * The `utility_functions` directory contains all custom functions required in this protocol. These functions are also found in the `Supplementary Materials` directory.
     * The `Scripts` directory contains all MATLAB scripts used in this protocol. These scripts are also found in the `Supplementary Materials` directory.
     * The `Example data` directory contains all example data described in the protocol text. These files are also found in the `Supplementary Materials` directory.

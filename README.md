@@ -15,7 +15,7 @@ RNA-based sample discrimination and classification can be used to provide biolog
 The full text of this protocol is available here: 
 INSERT LINK FOR PUBLISHED PAPER?
 
-For questions regarding usage, please email: kt40@queensu.ca
+For questions regarding usage, please email: kt40@queensu.ca or 17ti6@queensu.ca
 
 <div align="center">
     <img src="https://github.com/Renwick-Lab/RNA-ML-Sample-Hierarchical-Classification/assets/57264991/c0ce8e7e-8a0b-4768-9f5e-85c8db870526" width="750">
@@ -60,9 +60,13 @@ Estimated time: 1 hour
 **Note:** The example in this protocol uses miRNA expression data from different neuroendocrine neoplasms. This data is available in the `Supplementary Materials` of this protocol. The complete analysis is available at [Nanayakkara et al.,2020](https://academic.oup.com/narcancer/article/2/3/zcaa009/5867117)
 
 ### Hardware requirements
-- Computer with internet access and `>=` 4 GB of RAM. This protocol was developed on Mac OS 10.14.6 with 8 GB of RAM, 2 cores and Windows 11 with 32 GB of RAM, 8 cores. In addition, the protocol was tested on both Mac and Windows operating systems with a range of specifications. 
+- Computer with internet access and &ge; 4 GB of RAM.
+
+**Note:** This protocol was developed on Mac OS 10.14.6 with 8 GB of RAM, 2 cores and Windows 11 with 32 GB of RAM, 8 cores. In addition, the protocol was tested on both Mac and Windows operating systems with a range of specifications. Some of the time estimates may vary based on the hardware specifications.
 
 ## MFeaST usage
+
+Rank molecules with the strongest
 
 ## Troubleshooting
 

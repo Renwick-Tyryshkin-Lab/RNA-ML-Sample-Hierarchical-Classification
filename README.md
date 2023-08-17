@@ -5,7 +5,7 @@ Protocol for RNA-based sample discrimination and hierarchical classification.
 * [Introduction](#intro)
 * [Software installation and directory set-up](#setup)
 * [Materials and equipment](#materials)
-* [How to use this repository](#git-instructions)
+* [How to use this github page](#git-instructions)
 * [MFeaST Usage](#mfeast-usage)
 * [Troubleshooting](#troubleshooting)
 
@@ -71,7 +71,7 @@ Estimated time: 1 hour
 
 **Note:** This protocol was developed on Mac OS 10.14.6 with 8 GB of RAM, 2 cores and Windows 11 with 32 GB of RAM, 8 cores. In addition, the protocol was tested on both Mac and Windows operating systems with a range of specifications. Some of the time estimates may vary based on the hardware specifications.
 
-## How to use this github page
+## How to use this github page<a name="git-instructions"></a>
 * Download the `Supplementary Materials` folder.
 * This folder contains the MATLAB scripts and functions required for this protocol.
 * `Supplementary Materials` also contains the example data used in the protocol. 
@@ -83,7 +83,7 @@ Estimated time: 1 hour
 
 The _Molecular Feature Selection Tool (MFeaST)_ is an ensemble feature selection tool. _MFeaST_ ranks all available features based on their combined score from multiple selection algorithms. Compared to other ensemble approaches which are limited to a subset of feature selection algorithms, _MFeaST_ uses filter, wrapper, and embedded techniques. 
 
-See [Gerolami et al. (2022)](#https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9407361/) for more information on _MFeaST_.
+See [Gerolami et al. (2022)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9407361/) for more information on _MFeaST_.
 
 ### Format data for _MFeaST_
 MFeaST requires the data to be formatted with sample IDs as the first row, class labels as the subsequent rows, followed by the remaining feature expression rows and the feature names in the first column. Our formatted data is saved in the _training_data4MFeaST.csv_ file and is also provided in Supplementary Table 4.

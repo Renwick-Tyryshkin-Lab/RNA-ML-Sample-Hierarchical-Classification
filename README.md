@@ -1,4 +1,4 @@
-# RNA-ML-Sample-Hierarchical-Classification
+# A User-Driven Machine Learning Approach for RNA-Based Sample Discrimination and Hierarchical Classification 
 Protocol for RNA-based sample discrimination and hierarchical classification.  
 
 ## Table of Contents

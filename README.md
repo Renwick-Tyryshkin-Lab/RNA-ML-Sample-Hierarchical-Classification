@@ -57,7 +57,7 @@ Estimated time: 1 hour
 - Custom MATLAB scripts and functions (found in `Supplementary Materials`)
 - Expression data (e.g. miRNA-Seq, RNA-Seq, scRNA-Seq, etc.)
 
-**Note:** The example in this protocol uses miRNA expression data from different neuroendocrine neoplasms. This data is available in the `Supplementary Materials` of this protocol. The complete analysis is available at [Nanayakkara et al.,2020](https://academic.oup.com/narcancer/article/2/3/zcaa009/5867117)
+**Note:** The example in this protocol uses miRNA expression data from different neuroendocrine neoplasms. This data is available in the `Supplementary Materials` of this protocol. The complete analysis is available at [Nanayakkara et al.,2020.](https://academic.oup.com/narcancer/article/2/3/zcaa009/5867117)
 
 ### Hardware requirements
 - Computer with internet access and &ge; 4 GB of RAM.

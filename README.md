@@ -5,6 +5,7 @@ Protocol for RNA-based sample discrimination and hierarchical classification.
 * [Introduction](#intro)
 * [Software installation and directory set-up](#setup)
 * [Materials and equipment](#materials)
+* [How to use this repository](#git-instructions)
 * [MFeaST Usage](#mfeast-usage)
 * [Troubleshooting](#troubleshooting)
 
@@ -64,9 +65,94 @@ Estimated time: 1 hour
 
 **Note:** This protocol was developed on Mac OS 10.14.6 with 8 GB of RAM, 2 cores and Windows 11 with 32 GB of RAM, 8 cores. In addition, the protocol was tested on both Mac and Windows operating systems with a range of specifications. Some of the time estimates may vary based on the hardware specifications.
 
-## MFeaST usage
+## How to use this github page
+* Download the `Supplementary Materials` folder.
+* This folder contains the MATLAB scripts and functions required for this protocol.
+* `Supplementary Materials` also contains the example data used in the protocol. 
+* Download _MFeaST_ from https://www.renwicklab.com/molecular-feast/. See [Software installation and directory set-up](#setup))
+* Follow the instructions in [Software installation and directory set-up](#setup) for setting up your MATLAB workspace and directories.
+* Follow the complete protocol text for how to run the MATLAB scripts, functions and apps for your data.
 
-Rank molecules with the strongest
+## _MFeaST_ Usage
+
+The _Molecular Feature Selection Tool (MFeaST)_ is an ensemble feature selection tool. _MFeaST_ ranks all available features based on their combined score from multiple selection algorithms. Compared to other ensemble approaches which are limited to a subset of feature selection algorithms, _MFeaST_ uses filter, wrapper, and embedded techniques. 
+
+See [Gerolami et al. (2022)](#https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9407361/) for more information on _MFeaST_.
+
+### Format data for _MFeaST_
+MFeaST requires the data to be formatted with sample IDs as the first row, class labels as the subsequent rows, followed by the remaining feature expression rows and the feature names in the first column. Our formatted data is saved in the _training_data4MFeaST.csv_ file and is also provided in Supplementary Table 4.
+
+Example: 
+![image](https://github.com/Renwick-Lab/RNA-ML-Sample-Hierarchical-Classification/assets/57264991/a939a64d-3719-41eb-bec5-c92af3ea29d2)
+
+### Run feature selection with _MFeaST_
+1. Open the _MFeaST_ application. If this is your first time opening the application and/or you receive an error, see [Troubleshooting 2](#t2).
+
+2. Click _Import Data_ and navigate to your expression data file. The file must be a .csv or .xlsx file. In our example, the data is stored in _training_data4MFeaST.csv_ located within the `Neuroendocrine_neoplasms/results_data` directory (Figure 18A).
+
+3. When prompted, indicate that the data are not log2 transformed. Click _Next_ to proceed. 
+
+**Note:** The data must be positive unless they are log2 transformed. If your data are log2 transformed, select “Yes”. If the data are log2 transformed and/or contain negative values, “Negative values detected” will appear next to the _Value Check_ (under the _Data Input_ section, Figure 18A). It is assumed that expression data must be positive, therefore if your data has negative values, it may be log-transformed or contain an error.
+
+4. Select a binary comparison for feature selection. The categories in the input file are listed on the lefthand menu. All possible binary comparisons of classes within a category are listed on the righthand menu. Under the _Comparisons Selection_ tab, select a category e.g. 'Embryological_Origin' from the lefthand menu (Figure 18B). Then, select the comparison e.g. ‘Midgut vs Non-midgut’ from the righthand menu. Click _Next_ to continue.
+
+5. Under the _Feature Selection_ tab (Figure 19), set the relevant feature selection parameters. There are three menus on this page: Select algorithms, Cross-validation, and # Iterations for Sequential algorithms (alg.). Recommendations for each menu are listed below. After adjusting the menu options, click _Run_ to proceed.
+    a. Select Algorithms: We recommend using all algorithms. However, the sequential algorithms will take a long time to run and may need to be excluded for datasets with thousands of features remaining after filtering.    
+    b.	Cross-validation: Select 5-fold cross-validation (default). For datasets with less than five samples in one class, use leave-one-out validation.    
+    c.	# Iterations for Sequential alg.: Use the default 5 iterations. This value is the maximum number of iterations the sequential algorithms perform to compute a stable solution.    
+
+**Note:** You may increase the number of iterations to improve the stability of features selected by the sequential algorithms. Or you may decrease this value to speed up execution. Using the example data, this step may take 2-4 hours to run depending on the computer specifications and if sequential algorithms were selected. 
+
+6. Once the feature selection ranking algorithms are complete, the results are presented under the _Results_ tab (Figure 20). To review the ranking information from each feature selection algorithm, select _Ranked Features_ from the drop-down list (Figure 20, number 1). Select _Ranked cell data_ from the drop-down menu to view the ranked expression data.
+
+7. Export the results into a .mat file (Figure 20, number 2). Click _Export Results_ and then click on the .mat button. Name the file as e.g. _midgut_v_nonmidgut_rankedResults.mat_.
+
+**Note:** The ranking results can also be exported into an Excel file by clicking Export Results → .xlsx.
+
+9. Save the session by clicking _Save as_ from the drop-down list at the top right of the window (Figure 20, number 13). This saves the entire _MFeaST_ session. The session can be opened later, without re-running the feature selection, by selecting _Open_ in the Session drop down list. You can override an existing session or save as a new session.
+
+### Select top ranking features
+
+There are several approaches for selecting the top-ranked features. The discriminatory features can be selected using all, a top percentage, and/or a custom list of ranked features. The selected features can be visualized as a group, individually or pairwise.
+
+#### Select all possible features important for discrimination
+If the goal is to select all possible features that are important for discrimination, select the top % of features (Figure 20, number 14) for which the best clustering is observed.    
+
+1. Select the top 1% and visualize with a clustergram and/or t-SNE plot.     
+
+**Note:** There is a minimum number of features required to generate a t-SNE scatterplot and/or clustergram. For t-SNE, you require at least two features. For hierarchical clustering, this value may vary based on the distance metric chosen.  
+
+2. To generate a clustergram using the features in the _Selected Features_ list, proceed to the _Clustering_ tab (Figure 21). We recommend using the default parameters (Samples similarity: Spearman, Features similarity: Euclidean, Linkage: Average, Color map: RedBlue, Symmetric: yes) and adjusting as necessary. Click on the _Boxplot_ button to create a boxplot and select a value for the display range. Choose the display range based on the upper quartile of majority of the plotted boxes. After adjusting the parameters, click the _Generate_ button. After reviewing the clustergram, return to the _Results_ tab.    
+
+3. To generate a t-SNE plot using the selected features, click on the _TSNE_ button in the _Results_ tab (Figure 20, number 18).     
+
+4. Repeat the visualization with the top 5%, 10%, etc. of selected features. Note the range of top percentages for which the best clustering is observed, i.e. where the two classes form distinct clusters. The range identifies features to use in subsequent analysis.     
+
+**Note:** Depending on your application and objective, you may go with the smallest or largest percentage of features within the range.
+
+#### Select smallest set of features
+If the goal is to select the smallest set of features, then further custom selection is required.
+
+1. Click on the _Predictive Importance Plot_ button (Figure 20, number 12) to visualize the ranked discriminatory ability of all features. For a given feature, a value closer to 1 indicates higher importance in discriminating between the two classes.
+
+2. Make a note of where there is a drop in discriminatory ability on the predictive importance plot (e.g. an L shaped curve or an inflection point). This point is an estimate of how far to go down the ranked list when selecting features. In our midgut vs non-midgut comparison, the drop occurs between the top 1% and 5% of features (Figure 22).
+
+3. Review the discriminatory power of (a) individual features (b) consecutive pairs of features, or (c) one feature paired with any other feature, by generating scatterplots under the _Plot_ panel. You may edit the plot markers by clicking on the eyedropper button (Figure 20, number 9).    
+    a. To plot features individually: Click on the first feature in the ranked list. The feature row will become highlighted on the ranking list panel. This will plot the expression values on the y-axis against the sample numbers on the x-axis.    
+   b. To view paired features: Select the button underneath the ranked list with two circles and a downward arrow (Figure 20, number 3) to plot the first two features. Click on this button again to move down the ranked list pairwise. To move up the list, click on the button beside it, with an upward arrow.    
+   c. To view any feature paired with any other feature: Click on any two features consecutively. The two selected features will be highlighted on the ranking list panel and displayed on the scatterplot, one versus the other.
+
+**Note:** To better visualize positively skewed expression values, select the “LOG 2” button (Figure 20, number 8) to apply log2 transformation. 
+
+4. Add a feature shown on the scatterplot to the _Selected Features_ list by clicking the plus button beside the axis corresponding to the feature (Figure 20, number 5 and 10).
+
+5. Remove a feature from the Selected Features list by clicking the minus button beside the axis corresponding to the feature (Figure 20, number 6 and 11). Alternatively, select the feature on the _Selected Features_ list and click the minus button (Figure 20, number 16).
+   
+7. Based on the results of the scatterplot and predictive importance plot, add, or remove features from the custom list. Visualize the combined discriminatory ability of the features through generating t-SNE scatterplot (Figure 20, number 18) and clustergram.
+
+8. Copy the list of selected features by clicking the Copy button (Figure 20, number 19).
+
+**Note:** This process requires some trial and error as features are added or removed. 
 
 ## Troubleshooting
 

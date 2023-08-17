@@ -229,14 +229,14 @@ Errors during *MFeaST* installation.
         - Click the lock icon in the left-hand corner beside “Click the lock to make changes.” A message should appear in the “Allow apps downloaded from:” section indicating MolecularFeaST was blocked. Select the “Open Anyway” button beside this message. A pop-up window will appear, select “Open” (Figure 8D).
         - MFeaST will begin installing. You may get a pop-up message “java wants to make changes” (Figure 8E). Type in your administrator password and select “OK”.
 
+    - _"Cannot locate a valid install area"_
+        - Make sure you download and install the “One-step installation” version of _MFeaST_ from https://www.renwicklab.com/downloads/.
+
 <div align="center">
     <img src="https://github.com/Renwick-Lab/RNA-ML-Sample-Hierarchical-Classification/assets/57264991/f1d322f8-55db-485f-b698-b2964079ad12">
 </div>
 
 **Figure 8. Troubleshooting Problem 2 – MFeaST “Developer cannot be verified” Installation error on Mac OS.** (A) “Developer cannot be verified” error will window pop-up when trying to open _MFeaST_ for the first time. Click “Cancel.” (B) Open “System Preferences” and select “Security and Privacy.” (C) Under the “General” tab of the “Security and Privacy” window, warning for _MolecularFeast_ will appear. Select “Open Anyway.” (D) Click the _MFeaST_ icon to open again. Click “Open” on pop-up “Developer cannot be verified” error window. (E) Enter administrator password if prompted. 
-
-    - _"Cannot locate a valid install area"_
-        - Make sure you download and install the “One-step installation” version of MFeaST from https://www.renwicklab.com/downloads/. 
    
 * Windows operating system:
     *  _“Do you want to allow this app from an unknown publisher to make changes to your device?”_

@@ -41,7 +41,7 @@ Estimated time: 1 hour
 **CRITICAL:** During installation, ensure the following toolboxes are selected for download: *Bioinformatics Toolbox*, *Statistics and Machine Learning Toolbox*, *Deep Learning Toolbox*, *Parallel Computing Toolbox*, and the *Optimization Toolbox*. To check if these toolboxes are installed in MATLAB, see [Troubleshooting 1](#t1). 
 
 2. Download and install _MFeaST_ from: [https://www.renwicklab.com/molecular-feast/](https://www.renwicklab.com/molecular-feast/).  
-    a. Choose the one-step installation version. This ensures the MATLAB Runtime corresponding to the app version is also installed.
+    a. Choose the one-step installation version. This ensures the MATLAB Runtime corresponding to the app version is also installed.    
     b. Select your operating system and then click the “Add to cart” button. Click “View cart”.  
     c. Click “Proceed to checkout”. Type in your contact information as requested and click “Submit”.  
     d. Click the “Download” button.  

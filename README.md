@@ -50,7 +50,21 @@ Estimated time: 1 hour
 
    **Note:** If you already have MATLAB installed, you may still need to install the one-step installation version of _MFeaST_. This version will install the MATLAB Runtime corresponding to the app, which may be different from your installed MATLAB software.
 
+**Download _MFeaST_ installation file:**
+
+https://github.com/Renwick-Lab/RNA-ML-Sample-Hierarchical-Classification/assets/57264991/bd5a058d-d51c-4ac6-ae85-f9803c549203
+
+**Install _MFeaST_ for Windows**
+
+https://github.com/Renwick-Lab/RNA-ML-Sample-Hierarchical-Classification/assets/57264991/81ef611e-208d-4c4a-9d73-29d3fbbb6366
+
+**Install _MFeaST_ for Mac**
+
+https://github.com/Renwick-Lab/RNA-ML-Sample-Hierarchical-Classification/assets/57264991/3d388621-401d-4754-b2c1-3e681119d59f
+
 4. Create a `utility_functions` directory to store utility functions (programming code). These functions may be applied in other future projects. We recommend creating this directory within the `Documents/MATLAB` directory.
+
+https://github.com/Renwick-Lab/RNA-ML-Sample-Hierarchical-Classification/assets/57264991/9492a7a9-db03-4d79-8d07-4e5fa1f76e84
 
 5. Create a main project directory to store MATLAB scripts and functions for each project. For this example, we name this directory, `Neuroendocrine_neoplasms`. We create this directory under `Documents`; however, you may create this directory wherever you store your work.  
     a. Within the main project directory, create a subdirectory, `results_data`. Throughout the protocol, new output files will be saved to the `results_data` directory.  

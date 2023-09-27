@@ -1,8 +1,6 @@
 # A User-Driven Machine Learning Approach for RNA-Based Sample Discrimination and Hierarchical Classification 
 Protocol for RNA-based sample discrimination and hierarchical classification.  
 
-If you have any problem running this repository, please contact us at 17ti6@queensu.ca. 
-
 ## Table of Contents
 * [Introduction](#intro)
 * [How to use this github page](#git-instructions)

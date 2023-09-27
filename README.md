@@ -15,7 +15,7 @@ RNA-based sample discrimination and classification can be used to provide biolog
 
 The full text of this protocol is available here: 
 
-For questions regarding usage, please email: kt40@queensu.ca or 17ti6@queensu.ca
+If you have any questions regarding use or troubleshooting, please email us: kt40@queensu.ca (K.T) or 17ti6@queensu.ca (T.I)
 
 <div align="center">
     <img src="https://github.com/Renwick-Lab/RNA-ML-Sample-Hierarchical-Classification/assets/57264991/c0ce8e7e-8a0b-4768-9f5e-85c8db870526" width="750">

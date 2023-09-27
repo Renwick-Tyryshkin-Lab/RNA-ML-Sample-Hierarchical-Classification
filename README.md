@@ -14,7 +14,6 @@ Protocol for RNA-based sample discrimination and hierarchical classification.
 RNA-based sample discrimination and classification can be used to provide biological insights and/or distinguish between clinical groups. However, finding informative differences between sample groups can be challenging due to the multidimensional and noisy nature of sequencing data. Here, we apply a machine learning approach for hierarchical discrimination and classification of samples with high dimensional miRNA expression data. Our protocol comprises data preprocessing, unsupervised learning, feature selection, and machine learning-based hierarchical classification, alongside open-source MATLAB code.
 
 The full text of this protocol is available here: 
-INSERT LINK FOR PUBLISHED PAPER?
 
 For questions regarding usage, please email: kt40@queensu.ca or 17ti6@queensu.ca
 

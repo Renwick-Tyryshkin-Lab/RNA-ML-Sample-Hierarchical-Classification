@@ -28,7 +28,7 @@ If you have any questions regarding use or troubleshooting, please email us: kt4
     * The `Example data` directory contains all example data described in the protocol text. These files are also found in the `Supplementary Materials` directory.
 * This folder contains the MATLAB scripts and functions required for this protocol.
 * `Supplementary Materials` also contains the example data used in the protocol. 
-* Download _MFeaST_ from https://www.renwicklab.com/molecular-feast/. See [Software installation and directory set-up](#setup))
+* Download _MFeaST_ from https://www.renwicklab.com/molecular-feast/. See [Software installation and directory set-up](#setup)
 * Follow the instructions in [Software installation and directory set-up](#setup) for setting up your MATLAB workspace and directories.
 * Follow the complete protocol text for how to run the MATLAB scripts, functions and apps for your data.
 

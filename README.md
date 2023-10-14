@@ -22,12 +22,9 @@ If you have any questions regarding use or troubleshooting, please email us: kt4
 </div>
 
 ## How to use this github page<a name="git-instructions"></a>
-* Download the `Supplementary Materials` directory.
-    * The `utility_functions` directory contains all custom functions required in this protocol. These functions are also found in the `Supplementary Materials` directory.
-    * The `Scripts` directory contains all MATLAB scripts used in this protocol. These scripts are also found in the `Supplementary Materials` directory.
-    * The `Example data` directory contains all example data described in the protocol text. These files are also found in the `Supplementary Materials` directory.
-* This folder contains the MATLAB scripts and functions required for this protocol.
-* `Supplementary Materials` also contains the example data used in the protocol. 
+* Download the `Supplementary Materials` directory.    
+    * This folder contains the MATLAB scripts and functions required for this protocol.
+* Example data used in the protocols is provided as .csv files, labelled "Supplementary_Table". 
 * Download _MFeaST_ from https://www.renwicklab.com/molecular-feast/. See [Software installation and directory set-up](#setup)
 * Follow the instructions in [Software installation and directory set-up](#setup) for setting up your MATLAB workspace and directories.
 * Follow the complete protocol text for how to run the MATLAB scripts, functions and apps for your data.

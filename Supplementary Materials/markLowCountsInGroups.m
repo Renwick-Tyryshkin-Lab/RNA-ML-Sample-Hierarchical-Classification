@@ -17,14 +17,14 @@ function mark2remove = markLowCountsInGroups(datain, cutoff, percent, groups)
 arguments
     datain (:,:) {mustBeNumeric}; 
     cutoff double {mustBeLessThanOrEqual(cutoff, 1), mustBeGreaterThanOrEqual(cutoff, 0)}
-    percent double {mustBeLessThanOrEqual(percent, 100), mustBeGreaterThan(percent, 0)}
+    percent double {mustBeLessThanOrEqual(percent, 1), mustBeGreaterThan(percent, 0)}
     groups (1,:) {mustBeEqualLength(datain, groups)} = categorical(ones(1,size(datain,2)));
 end
 
 %convert percent into # of samples that must pass the threshold
 [grcount, ~] = grp2idx(groups);
 n = histcounts(groups)';
-numToCut = (percent.*n)./100;
+numToCut = percent.*n;
 
 %initialize matrix to mark features below threshold in each group
 flagsPerGroup = false(size(datain, 1), length(n));
